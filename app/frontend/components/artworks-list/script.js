@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       artworks: [],
-      resource_url: '/api/artworks'
+      resource_url: `${ API_URL }/artworks`
     }
   },
 
@@ -36,8 +36,8 @@ export default {
 
     togglePublished(artwork) {
       $.ajax({
-        url: `/api/artworks/${ artwork.id }/toggle_published`,
         method: 'PUT',
+        url: `${ API_URL }/artworks/${ artwork.id }/toggle_published`,
         success: (res) => {
           artwork.published = res.published;
         }

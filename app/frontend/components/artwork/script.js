@@ -18,7 +18,7 @@ export default {
   methods: {
     fetchData() {
       $.ajax({
-        url: `/api/artworks/${ this.$route.params.artwork_id }`,
+        url: `${ API_URL }/artworks/${ this.$route.params.artwork_id }`,
         success: (res) => {
           this.artwork = res;
         },
@@ -30,7 +30,7 @@ export default {
 
     togglePublished() {
       $.ajax({
-        url: `/api/artworks/${ this.$route.params.artwork_id }/toggle_published`,
+        url: `${ API_URL }/artworks/${ this.$route.params.artwork_id }/toggle_published`,
         type: 'PUT',
         success: (res) => {
           this.artwork.published = res.published;

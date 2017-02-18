@@ -8,7 +8,8 @@ These are two applications: Rails API in the backend and VueJS in the frontend.
 To find out how to integrate Rails API with VueJS app.
 
 ### Where?
-I managed to deploy it to Heroku so the results are all [here](https://artfinder-rails.herokuapp.com/). Heroku doesn't work well with pictures served from Asset Pipeline, so no pictures, sorry.
+I managed to deploy it to Heroku so the results are all [here](https://artfinder-vuejs-spa.herokuapp.com/).
+Heroku doesn't allow several dynos for free, so I had to create two separate Heroku apps, and the SPA fires requests to [the API app](https://artfinder-rails-api.herokuapp.com/).
 
 ---
 

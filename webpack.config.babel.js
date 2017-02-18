@@ -63,19 +63,14 @@ export default {
       _: 'lodash',
       $: 'jquery',
       jquery: 'jquery'
+    }),
+    new webpack.DefinePlugin({
+      API_URL: JSON.stringify('http://localhost:3000')
     })
   ],
 
   devServer: {
     contentBase: path.join(__dirname, 'build'),
-    port: 9000,
-    proxy: {
-      '/api': {
-        target: 'https://artfinder-rails-api.herokuapp.com:3003',
-        pathRewrite: {
-          '^/api' : ''
-        }
-      }
-    }
+    port: 9000
   }
 }
