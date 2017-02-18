@@ -16,7 +16,7 @@
     .uk-align-center.uk-width-1-2(uk-grid)
       .uk-card.uk-card-default
         .uk-card-media-top
-          img(v-bind:src="artwork.image")
+          img(v-bind:src="imagePath(artwork)")
           .uk-card-body
             h3.uk-card-title
               | {{ artwork.title }}

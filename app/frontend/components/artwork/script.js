@@ -1,5 +1,3 @@
-// import UIkit from 'uikit'
-
 export default {
   data() {
     return {
@@ -28,18 +26,16 @@ export default {
       });
     },
 
+    imagePath(artwork) {
+      return `${ API_URL }${ artwork.original_image_url }`
+    },
+
     togglePublished() {
       $.ajax({
         url: `${ API_URL }/artworks/${ this.$route.params.artwork_id }/toggle_published`,
         type: 'PUT',
         success: (res) => {
           this.artwork.published = res.published;
-          // UIkit.notification({
-          //   message: `${ this.artwork.title } was ${ this.artwork.published ? 'published' : 'unpublished' }`,
-          //   pos: 'top-right',
-          //   status: this.artwork.published ? 'success' : 'warning',
-          //   timeout: 2000
-          // })
         }
       });
     }

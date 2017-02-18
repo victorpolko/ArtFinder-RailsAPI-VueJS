@@ -33,7 +33,7 @@
           tr(v-for="artwork in artworks")
             td.uk-table-link
               router-link.uk-text-center.uk-link-reset(:to="{ name: 'artwork', params: { artwork_id: artwork.id } }")
-                img.uk-width-1-3(:src="artwork.image")
+                img.uk-width-1-3(:src="imagePath(artwork)")
             td.uk-table-link
               router-link.uk-link-reset(:to="{ name: 'artwork', params: { artwork_id: artwork.id } }")
                 | {{ artwork.title }}

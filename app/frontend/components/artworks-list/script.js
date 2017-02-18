@@ -44,6 +44,10 @@ export default {
       });
     },
 
+    imagePath(artwork) {
+      return `${ API_URL }${ artwork.medium_image_url }`
+    },
+
     escapeRegExp(str) {
       return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
     }
