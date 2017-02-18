@@ -31,7 +31,7 @@ export default {
 
   methods: {
     paginate(data) {
-      this.artworks = JSON.parse(data);
+      this.artworks = data;
     },
 
     togglePublished(artwork) {
@@ -40,6 +40,7 @@ export default {
         url: `${ API_URL }/artworks/${ artwork.id }/toggle_published`,
         success: (res) => {
           artwork.published = res.published;
+          // this.resource_url = this.resource_url + ' '; // Force update pagination data
         }
       });
     },

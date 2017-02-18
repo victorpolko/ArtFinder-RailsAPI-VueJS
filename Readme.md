@@ -10,12 +10,15 @@ To find out how to integrate Rails API with VueJS app.
 ### Where?
 I managed to deploy it to Heroku so the results are all [here](https://artfinder-vuejs-spa.herokuapp.com/).
 Heroku doesn't allow several dynos for free, so I had to create two separate Heroku apps, and the SPA fires requests to [the API app](https://artfinder-rails-api.herokuapp.com/).
+As I stored pictures in the Rails *public* folder, they are not reachable with Heroku.
+It took me much longer to properly deploy it there and set up the endpoints than the development itself.
 
 ---
 
 ## Setup
 #### Prerequisites
 * Ruby 2.4.0
+* PostgreSQL 8+
 * Node and npm
 * **imagemagick** for paperclip attachments:
 

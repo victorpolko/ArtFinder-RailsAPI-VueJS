@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   end
 
   resources :artworks, only: [:index, :show], concerns: :paginatable do
-    patch :toggle_published, on: :member
-    put :toggle_published, on: :member
+    member do
+      patch :toggle_published
+      put   :toggle_published
+    end
   end
 end
