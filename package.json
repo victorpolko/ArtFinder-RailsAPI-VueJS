@@ -10,6 +10,9 @@
     "start": "node server.js",
     "postinstall": "webpack --config ./webpack-production.config.babel.js --progress --colors"
   },
+  "engines": {
+    "node": ">=8.1.4"
+  },
   "keywords": [
     "rails",
     "rails-api",
